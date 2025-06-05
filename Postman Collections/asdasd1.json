@@ -3042,7 +3042,12 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": ""
+													"raw": "{\n    \"waiter_id\": 1,\n    \"profile_links\": [\n        \"00000\",\n        \"cv.menu\",\n        \"aa1\"\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
 												},
 												"url": "{{base_url}}/waiter/assignTo"
 											},
