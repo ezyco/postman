@@ -3041,15 +3041,8 @@
 												"method": "POST",
 												"header": [],
 												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "assf",
-															"value": "",
-															"type": "text",
-															"uuid": "9a76ae32-926d-4a84-bd0b-94e7033ac5b7"
-														}
-													]
+													"mode": "raw",
+													"raw": ""
 												},
 												"url": "{{base_url}}/waiter/assignTo"
 											},
