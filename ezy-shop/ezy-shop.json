@@ -1,0 +1,1991 @@
+{
+	"info": {
+		"_postman_id": "15023c04-0f8b-4428-a0d4-6a719a9a5d72",
+		"name": "ezy shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"id": "cfad3581-866f-42ae-b17b-e550d6666077",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/auth/login"
+							},
+							"response": [
+								{
+									"id": "664f8a28-ba2a-4531-9c3a-4b10edd597dc",
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/auth/login"
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:34:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Already authenticated. Access to this route is not allowed.\"\n}"
+								},
+								{
+									"id": "520435a3-70d4-4542-873c-51b08349f65e",
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/auth/login"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:35:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"9|ZvU4V7jM6ETx7IqTU7UUDaZzk5JeMElTeqseNdSbcec50b4a\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Omid\",\n        \"avatar\": null,\n        \"postcode\": \"123\",\n        \"phone\": \"09389497958\",\n        \"address\": \"Toronto\",\n        \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n        \"roles\": [],\n        \"permissions\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "me",
+							"id": "51c29a20-15a6-4656-80c9-3e9e144dd4f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/auth/me"
+							},
+							"response": [
+								{
+									"id": "acfde43d-995c-4318-86ba-4112a853c1ec",
+									"name": "me",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/auth/me"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:34:15 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"8|NJ62nMRMNU2Dwf46J2pV8wemID83qdKNRSgNt0Zsa438249e\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Omid\",\n        \"avatar\": null,\n        \"postcode\": \"123\",\n        \"phone\": \"09389497958\",\n        \"address\": \"Toronto\",\n        \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n        \"roles\": [],\n        \"permissions\": []\n    }\n}"
+								},
+								{
+									"id": "fcf59790-787c-4a9a-9cfb-3ce7f9c4850d",
+									"name": "me",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/auth/me"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 21 Jan 2025 17:20:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.27"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Report-To",
+											"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=l3sR%2Fw0ZyHF3VO9E%2BLer2n1E8oe72cmYSkp5zF%2BkmbdM%2FwblEjYYdealBqjTLFitShWFywJle0wiWaAjxOyfXwa7Cha45AH%2F5z%2FgrcKBIv0WTfAMeyO28JBMHRt1K6CYfG1SO0k%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "NEL",
+											"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "9058f925afbd37fe-FRA"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										},
+										{
+											"key": "server-timing",
+											"value": "cfL4;desc=\"?proto=TCP&rtt=109682&min_rtt=98438&rtt_var=50012&sent=21&recv=19&lost=0&retrans=0&sent_bytes=4587&recv_bytes=1325&delivery_rate=40975&cwnd=256&unsent_bytes=0&cid=83ec6d3bbf9e0862&ts=14459&x=0\""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"24|0CZqAOJyZ88PE7ODl0L7MirhHUNdFOsFr3rMv8bp61c5c007\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Omid\",\n        \"avatar\": null,\n        \"postcode\": \"123\",\n        \"phone\": \"09389497958\",\n        \"address\": \"Toronto\",\n        \"created_at\": \"2025-01-20T19:10:31.000000Z\",\n        \"roles\": [\n            \"admin\"\n        ],\n        \"permissions\": [\n            \"allUsers\",\n            \"allInvoices\",\n            \"allOrders\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update user",
+							"id": "1f73311d-c080-42b4-b72d-c7d2e4353307",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "postcode",
+											"value": "123122432",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "poyaa",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/auth/updateUser"
+							},
+							"response": [
+								{
+									"id": "8bcd903a-591f-4b4f-83a3-13ff80a39fe6",
+									"name": "update user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "postcode",
+													"value": "123122432",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "poyaa",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{base_url}}/auth/updateUser"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 20:43:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"1|GeWYYJvXRxBti0ktFgHYRXu2jqnj9MJvIL7nCi1e07250ded\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"test\",\n        \"avatar\": null,\n        \"postcode\": \"123122432\",\n        \"phone\": \"09389497958\",\n        \"address\": \"poyaa\",\n        \"created_at\": \"2025-01-19T20:28:43.000000Z\",\n        \"roles\": [],\n        \"permissions\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"id": "b4f665eb-f438-4e2f-bda9-3b837f00b789",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/auth/logout"
+							},
+							"response": [
+								{
+									"id": "292a3537-3607-47b6-a9ad-4aaa23be62ef",
+									"name": "logout",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/auth/logout"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:35:15 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Logged out successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "send otp",
+							"id": "485ac90a-0913-4d39-8c0d-e6bacb924c3e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "mobile",
+											"value": "09059119078",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "mobile",
+											"value": "09389497958",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/auth/sendOtp"
+							},
+							"response": [
+								{
+									"id": "19ddd9a3-6984-44ca-998e-e023104fad96",
+									"name": "send otp",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "mobile",
+													"value": "09059119078",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "mobile",
+													"value": "09389497958",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{base_url}}/auth/sendOtp"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:33:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": 1,\n    \"message\": \"موفق\",\n    \"data\": {\n        \"messageId\": 119028429,\n        \"cost\": 1.05\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "check otp",
+							"id": "cf396cad-53a9-4aac-9c3d-44240c3849e0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "code",
+											"value": "8656",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "09389497958",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/auth/checkOtp"
+							},
+							"response": [
+								{
+									"id": "6529012a-8e2c-48ab-ac81-4bfee0a4f720",
+									"name": "check otp",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "code",
+													"value": "7382",
+													"type": "text"
+												},
+												{
+													"key": "mobile",
+													"value": "09389497958",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{base_url}}/auth/checkOtp"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:33:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"8|NJ62nMRMNU2Dwf46J2pV8wemID83qdKNRSgNt0Zsa438249e\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Omid\",\n        \"avatar\": null,\n        \"postcode\": \"123\",\n        \"phone\": \"09389497958\",\n        \"address\": \"Toronto\",\n        \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n        \"roles\": [],\n        \"permissions\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "register",
+							"id": "fd1b1718-1c3a-4b1d-83f4-dfe396aa218a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "mobile",
+											"value": "09389497958",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "omidGanji",
+											"type": "text"
+										},
+										{
+											"key": "postcode",
+											"value": "1231231233",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "tehhrann",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/auth/register"
+							},
+							"response": [
+								{
+									"id": "4ea120a9-03c8-47be-8e1b-7b23f0224ac8",
+									"name": "register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "mobile",
+													"value": "09389497958",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "omidGanji",
+													"type": "text"
+												},
+												{
+													"key": "postcode",
+													"value": "1231231233",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "tehhrann",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{base_url}}/auth/register"
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:30:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Already authenticated. Access to this route is not allowed.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "reset password",
+							"id": "2c9d6427-bb59-438f-b088-45cad03c6ae7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "password",
+											"value": "omid1380",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/auth/resetPassword"
+							},
+							"response": [
+								{
+									"id": "677ae30b-a535-4a16-8c0f-c3cfdb478192",
+									"name": "reset password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "password",
+													"value": "omid1380",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{base_url}}/auth/resetPassword"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:34:32 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Password changed successfully\"\n}"
+								}
+							]
+						}
+					],
+					"id": "adb1f61b-10c5-44f8-9bcf-d04844497583"
+				},
+				{
+					"name": "Dashboard",
+					"item": [],
+					"id": "09a9821e-9050-4182-9283-0f74c0bdf348"
+				},
+				{
+					"name": "shop",
+					"item": [
+						{
+							"name": "product",
+							"item": [
+								{
+									"name": "index",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8f514fa5-7b5f-4cf7-8f20-e62d8365986e",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "5288b783-7d37-4363-a8cd-48b2ba6dffa2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": "{{base_url}}/shop/product",
+										"description": "The `GET` request to `/dashboard` endpoint retrieves data for the dashboard. The response is a JSON object with a `data` array containing objects. Each object in the `data` array has the following properties:\n\n- `link` (string): Represents a link.\n    \n- `img` (string): Represents an image URL.\n    \n- `title` (string): Represents a title.\n    \n- `enabled` (number): Represents the enabled status, where `1` indicates enabled and `0` indicates disabled.\n    \n\nHere is the JSON schema for the response:\n\n``` php\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"link\": {\n            \"type\": \"string\"\n          },\n          \"img\": {\n            \"type\": \"string\"\n          },\n          \"title\": {\n            \"type\": \"string\"\n          },\n          \"enabled\": {\n            \"type\": \"number\"\n          }\n        }\n      }\n    }\n  }\n}\n}\n\n ```"
+									},
+									"response": [
+										{
+											"id": "a28dca9a-d61d-4b32-9c97-642fbf2f256a",
+											"name": "index",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text",
+														"disabled": true
+													}
+												],
+												"url": "{{base_url}}/shop/product"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "127.0.0.1:8000"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.3.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 19 Jan 2025 14:37:17 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"data\": [\n        {\n            \"shopId\": 1,\n            \"productId\": 1,\n            \"productImage\": \"https://ezyconnect.ir/ezy.png\",\n            \"productName\": \"استند رومیزی دارای QR کد و NFC\",\n            \"productDescription\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n            \"productPrice\": 5500000,\n            \"productQty\": 10,\n            \"productMedia\": \"https://ezyconnect.ir/video/stand.mp4\",\n            \"productMediaMime\": \"mp4\",\n            \"shop\": {\n                \"link\": \"ezyconnect\",\n                \"title\": \"Ezy Connect Co.\",\n                \"subtitle\": null,\n                \"description\": null,\n                \"sellQty\": 0,\n                \"productQty\": 0,\n                \"avatar\": null,\n                \"coverImage\": null,\n                \"user\": {\n                    \"id\": 1,\n                    \"name\": \"Omid\",\n                    \"avatar\": null,\n                    \"postcode\": \"123\",\n                    \"phone\": \"09389497958\",\n                    \"address\": \"Toronto\",\n                    \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n                    \"roles\": [],\n                    \"permissions\": []\n                }\n            }\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "show",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8f514fa5-7b5f-4cf7-8f20-e62d8365986e",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "6eefa7f6-90db-43e9-805c-35ed8e5c3ec4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true,
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/shop/product/:slug",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"shop",
+												"product",
+												":slug"
+											],
+											"variable": [
+												{
+													"key": "slug",
+													"value": "pack"
+												}
+											]
+										},
+										"description": "The `GET` request to `/dashboard` endpoint retrieves data for the dashboard. The response is a JSON object with a `data` array containing objects. Each object in the `data` array has the following properties:\n\n- `link` (string): Represents a link.\n    \n- `img` (string): Represents an image URL.\n    \n- `title` (string): Represents a title.\n    \n- `enabled` (number): Represents the enabled status, where `1` indicates enabled and `0` indicates disabled.\n    \n\nHere is the JSON schema for the response:\n\n``` php\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"link\": {\n            \"type\": \"string\"\n          },\n          \"img\": {\n            \"type\": \"string\"\n          },\n          \"title\": {\n            \"type\": \"string\"\n          },\n          \"enabled\": {\n            \"type\": \"number\"\n          }\n        }\n      }\n    }\n  }\n}\n}\n\n ```"
+									},
+									"response": [
+										{
+											"id": "5c7fcf06-77df-4690-8d1d-32e2a98ea4c3",
+											"name": "show",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json",
+														"type": "text",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{base_url}}/shop/product/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"shop",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "127.0.0.1:8000"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.3.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 19 Jan 2025 14:37:30 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"data\": {\n        \"shopId\": 1,\n        \"productId\": 1,\n        \"productImage\": \"https://ezyconnect.ir/ezy.png\",\n        \"productName\": \"استند رومیزی دارای QR کد و NFC\",\n        \"productDescription\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n        \"productPrice\": 5500000,\n        \"productQty\": 10,\n        \"productMedia\": \"https://ezyconnect.ir/video/stand.mp4\",\n        \"productMediaMime\": \"mp4\",\n        \"shop\": {\n            \"link\": \"ezyconnect\",\n            \"title\": \"Ezy Connect Co.\",\n            \"subtitle\": null,\n            \"description\": null,\n            \"sellQty\": 0,\n            \"productQty\": 0,\n            \"avatar\": null,\n            \"coverImage\": null,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Omid\",\n                \"avatar\": null,\n                \"postcode\": \"123\",\n                \"phone\": \"09389497958\",\n                \"address\": \"Toronto\",\n                \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n                \"roles\": [],\n                \"permissions\": []\n            }\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "get By Link Slug",
+									"id": "6708db49-7414-4bfa-94b3-fdeb5226c084",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/shop/product/:link/:slug",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"shop",
+												"product",
+												":link",
+												":slug"
+											],
+											"variable": [
+												{
+													"key": "link",
+													"value": "ezy"
+												},
+												{
+													"key": "slug",
+													"value": "pack"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "016b39b0-537a-4421-9e33-6782a3ee955a",
+											"name": "show",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/shop/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"shop",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "127.0.0.1:8000"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.3.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 19 Jan 2025 14:37:47 GMT"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"data\": {\n        \"link\": \"ezyconnect\",\n        \"title\": \"Ezy Connect Co.\",\n        \"subtitle\": null,\n        \"description\": null,\n        \"sellQty\": 0,\n        \"productQty\": 0,\n        \"avatar\": null,\n        \"coverImage\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Omid\",\n            \"avatar\": null,\n            \"postcode\": \"123\",\n            \"phone\": \"09389497958\",\n            \"address\": \"Toronto\",\n            \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n            \"roles\": [],\n            \"permissions\": []\n        }\n    }\n}"
+										}
+									]
+								}
+							],
+							"id": "1c77902e-2bf9-4ee2-baf1-97de481ca19a"
+						},
+						{
+							"name": "index",
+							"id": "ffaf3fd3-d4ea-44c3-b79f-83098d247402",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/shop/"
+							},
+							"response": [
+								{
+									"id": "2f82e992-063f-4669-b3e8-adf94456b099",
+									"name": "index",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/shop/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sun, 26 Jan 2025 14:35:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.27"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "private, must-revalidate"
+										},
+										{
+											"key": "pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "expires",
+											"value": "-1"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										},
+										{
+											"key": "cf-cache-status",
+											"value": "DYNAMIC"
+										},
+										{
+											"key": "Report-To",
+											"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=cXwukBNmE7q6%2FCa5YSi6fcyLI5EDVHXMPocXPvBTTeIVizxcLPf2Wx%2FMYbrxhHMmuJWtEk1pxUKPmNy7yvrpuZJdwPo3DqxnXatpgaUyIW%2FEf1ZS%2FLAiUt755g3jYUgadJZf8OU%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "NEL",
+											"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+										},
+										{
+											"key": "Server",
+											"value": "cloudflare"
+										},
+										{
+											"key": "CF-RAY",
+											"value": "90813b34e9535d6d-FRA"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
+										},
+										{
+											"key": "alt-svc",
+											"value": "h3=\":443\"; ma=86400"
+										},
+										{
+											"key": "server-timing",
+											"value": "cfL4;desc=\"?proto=TCP&rtt=124136&min_rtt=109377&rtt_var=60218&sent=28&recv=27&lost=0&retrans=0&sent_bytes=4568&recv_bytes=1302&delivery_rate=37498&cwnd=255&unsent_bytes=0&cid=31d7b5758c46724c&ts=22973&x=0\""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": [\n        {\n            \"link\": \"ezy\",\n            \"title\": \"Ezy Connect Co.\",\n            \"subtitle\": null,\n            \"description\": null,\n            \"sellQty\": 0,\n            \"productQty\": 0,\n            \"avatar\": null,\n            \"coverImage\": null,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Omid\",\n                \"avatar\": null,\n                \"postcode\": \"123\",\n                \"phone\": \"09389497958\",\n                \"address\": \"Toronto\",\n                \"created_at\": \"2025-01-26T07:09:12.000000Z\",\n                \"roles\": [\n                    \"admin\"\n                ],\n                \"permissions\": [\n                    \"allUsers\",\n                    \"allInvoices\",\n                    \"allOrders\"\n                ]\n            },\n            \"products\": [\n                {\n                    \"shopId\": 1,\n                    \"productId\": 1,\n                    \"productSlug\": \"pack\",\n                    \"productImage\": \"https://ezyshop.storage.c2.liara.space/stand.png\",\n                    \"productName\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"productDescription\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"productPrice\": 5500000,\n                    \"productQty\": 10,\n                    \"productMedia\": \"https://ezyshop.storage.c2.liara.space/stand.mp4\",\n                    \"productMediaMime\": \"mp4\",\n                    \"shop\": {\n                        \"link\": \"ezy\",\n                        \"title\": \"Ezy Connect Co.\",\n                        \"subtitle\": null,\n                        \"description\": null,\n                        \"sellQty\": 0,\n                        \"productQty\": 0,\n                        \"avatar\": null,\n                        \"coverImage\": null\n                    }\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"id": "21d02e72-ba6f-400c-8bda-ae9865aa43fb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/shop/:link",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"shop",
+										":link"
+									],
+									"variable": [
+										{
+											"key": "link",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "1d143ec2-c432-45ef-9713-54897bd80365",
+									"name": "show",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/shop/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"shop",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 14:37:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": {\n        \"link\": \"ezyconnect\",\n        \"title\": \"Ezy Connect Co.\",\n        \"subtitle\": null,\n        \"description\": null,\n        \"sellQty\": 0,\n        \"productQty\": 0,\n        \"avatar\": null,\n        \"coverImage\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Omid\",\n            \"avatar\": null,\n            \"postcode\": \"123\",\n            \"phone\": \"09389497958\",\n            \"address\": \"Toronto\",\n            \"created_at\": \"2025-01-19T13:39:09.000000Z\",\n            \"roles\": [],\n            \"permissions\": []\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "d4357357-3c4b-42d1-82e6-b055c5191682"
+				},
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "index",
+							"id": "8dde598a-7e09-48ef-8cfa-5f9200b2eaa8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/order"
+							},
+							"response": [
+								{
+									"id": "d70548dd-0654-4c78-a958-fe91c3758c8a",
+									"name": "index",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"type\": \"0||1||2||3||4\", // البته درستش اینه اینجا status باشه\n    \"products\": [\n        [\n            \"productsType\"\n        ]\n    ],\n    \"createdAt\": \"1403/9/12\",\n    \"totalPrice\": 100000000,\n    \"trackId\": 654855478765454878\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/order"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 21:38:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": [\n        {\n            \"status\": 1,\n            \"products\": [],\n            \"createdAt\": \"1403-10-30 20:56:30\",\n            \"totalPrice\": null,\n            \"trackId\": \"123321\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 2,\n                        \"productable_id\": 1,\n                        \"qty\": 3\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-10-30 20:57:26\",\n            \"totalPrice\": 20000,\n            \"trackId\": \"3937086512\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 3,\n                        \"productable_id\": 1,\n                        \"qty\": 3\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:32:10\",\n            \"totalPrice\": 20000,\n            \"trackId\": \"3937091035\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 4,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:32:44\",\n            \"totalPrice\": 20000,\n            \"trackId\": \"3937091622\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 5,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:45:46\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321346\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 6,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:46:04\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321364\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 7,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:46:52\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321412\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 8,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:53:27\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321807\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 9,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 9,\n                        \"productable_id\": 2,\n                        \"qty\": 3\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:53:44\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321824\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 10,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 10,\n                        \"productable_id\": 2,\n                        \"qty\": 3\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:53:50\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321830\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 11,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 11,\n                        \"productable_id\": 2,\n                        \"qty\": 8\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:02\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321842\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 12,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 12,\n                        \"productable_id\": 2,\n                        \"qty\": 8\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:13\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321853\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 13,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 13,\n                        \"productable_id\": 2,\n                        \"qty\": 2\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:18\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321858\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 14,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 14,\n                        \"productable_id\": 2,\n                        \"qty\": 3\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:22\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321862\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 15,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 15,\n                        \"productable_id\": 2,\n                        \"qty\": 4\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:25\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321865\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 16,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 16,\n                        \"productable_id\": 2,\n                        \"qty\": 5\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:29\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321869\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 17,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 17,\n                        \"productable_id\": 2,\n                        \"qty\": 6\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:54:32\",\n            \"totalPrice\": null,\n            \"trackId\": \"1737321872\"\n        },\n        {\n            \"status\": 1,\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.png\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 5500000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 18,\n                        \"productable_id\": 1,\n                        \"qty\": 4\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"shopId\": 1,\n                    \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                    \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                    \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                    \"price\": 200000,\n                    \"qty\": 10,\n                    \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                    \"mediaMime\": \"mp4\",\n                    \"mediaSize\": 123123,\n                    \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                    \"deleted_at\": null,\n                    \"pivot\": {\n                        \"productable_type\": \"App\\\\Models\\\\Order\",\n                        \"orderId\": 18,\n                        \"productable_id\": 2,\n                        \"qty\": 6\n                    }\n                }\n            ],\n            \"createdAt\": \"1403-11-01 00:56:44\",\n            \"totalPrice\": 23200000,\n            \"trackId\": \"3937112556\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"id": "977bca11-8670-4fe5-9679-39b545dc3a1c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/order/:trackId",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"order",
+										":trackId"
+									],
+									"variable": [
+										{
+											"key": "trackId",
+											"value": "3937112556"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "6bc45557-475d-4cfa-9f94-f5b719188b88",
+									"name": "show",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/order/:trackId",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"order",
+												":trackId"
+											],
+											"variable": [
+												{
+													"key": "trackId",
+													"value": "3937112556"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 21:40:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": {\n        \"status\": 1,\n        \"products\": [\n            {\n                \"id\": 1,\n                \"shopId\": 1,\n                \"image\": \"https://ezyconnect.ir/ezy.png\",\n                \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                \"price\": 5500000,\n                \"qty\": 10,\n                \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                \"mediaMime\": \"mp4\",\n                \"mediaSize\": 123123,\n                \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                \"deleted_at\": null,\n                \"pivot\": {\n                    \"productable_type\": \"App\\\\Models\\\\Order\",\n                    \"orderId\": 18,\n                    \"productable_id\": 1,\n                    \"qty\": 4\n                }\n            },\n            {\n                \"id\": 2,\n                \"shopId\": 1,\n                \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                \"price\": 200000,\n                \"qty\": 10,\n                \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                \"mediaMime\": \"mp4\",\n                \"mediaSize\": 123123,\n                \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                \"deleted_at\": null,\n                \"pivot\": {\n                    \"productable_type\": \"App\\\\Models\\\\Order\",\n                    \"orderId\": 18,\n                    \"productable_id\": 2,\n                    \"qty\": 6\n                }\n            }\n        ],\n        \"createdAt\": \"1403-11-01 00:56:44\",\n        \"totalPrice\": 23200000,\n        \"trackId\": \"3937112556\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "status",
+							"id": "edd51528-f528-4e78-8aca-a9d51b89eb77",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sttat",
+											"value": "55",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/order/status/:trackId?status=2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"order",
+										"status",
+										":trackId"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "2"
+										}
+									],
+									"variable": [
+										{
+											"key": "trackId",
+											"value": "3938405442"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "47071dac-335a-403e-87b7-23ed156f8599",
+									"name": "show",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/order/:trackId",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"order",
+												":trackId"
+											],
+											"variable": [
+												{
+													"key": "trackId",
+													"value": "3937112556"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 21:40:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": {\n        \"status\": 1,\n        \"products\": [\n            {\n                \"id\": 1,\n                \"shopId\": 1,\n                \"image\": \"https://ezyconnect.ir/ezy.png\",\n                \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                \"price\": 5500000,\n                \"qty\": 10,\n                \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                \"mediaMime\": \"mp4\",\n                \"mediaSize\": 123123,\n                \"created_at\": \"2025-01-19T17:26:30.000000Z\",\n                \"updated_at\": \"2025-01-19T17:26:30.000000Z\",\n                \"deleted_at\": null,\n                \"pivot\": {\n                    \"productable_type\": \"App\\\\Models\\\\Order\",\n                    \"orderId\": 18,\n                    \"productable_id\": 1,\n                    \"qty\": 4\n                }\n            },\n            {\n                \"id\": 2,\n                \"shopId\": 1,\n                \"image\": \"https://ezyconnect.ir/ezy.pngg\",\n                \"title\": \"استند رومیزی دارای QR کد و NFC\",\n                \"description\": \"\\n                                               منو دیجیتال و استند هوشمند ایزی کانکت\\n\\n🎉 استند هوشمند ایزی کانکت، ارتباط مشتریان را با شما آسان\\u200cتر می\\u200cکند و به کاهش مصرف کاغذ کمک می\\u200cکند! با انتخاب این راهکار دیجیتال، همراه ما در حفظ محیط زیست باشید. 🌍💚\\n\\nبا اپلیکیشن تحت وب ایزی کانکت، تمامی اطلاعات صفحه را به سادگی مدیریت کنید:\\n\\n📍 تغییر قیمت\\u200cها با یک کلیک\\n📍 بارگذاری عکس\\u200cهای جدید\\n📍 مخفی کردن آیتم\\u200cهای تمام\\u200cشده\\n📍 اتصال به شبکه\\u200cهای اجتماعی\\n📍 پیام\\u200cرسان\\u200cها برای ارتباط سریع\\n📍 عکس\\u200cهای اسلایدی و بیشتر...\\n\\n📞 جهت مشاوره و ثبت سفارش با ما تماس بگیرید:\\n📱 09018817923 (مصطفئی)\\n📱 09126613612 (نظری)\\n\\nاشتراک های اپلیکیشن ایزی کانکت\\nدوساله 5,500,000 ت\\nدائمی 12,100,000 ت\\nقیمت استند ها از 350 ت شروع میشه دوستان\\n\\nنمونه طراحی هارو تو لینک بایو و هایلایت های پیج مشاهده کنید 🙏🏼\\n\\n🔹 #منو_دیجیتال #منو_کافه #استند_هوشمند #QR_Code #NFC_Stand #حمایت_از_محیط_زیست 🔹\\n\\n✨ راحتی، نوآوری و گامی سبز در خدمات کافه با ایزی کانکت! ✨\\n                                               \",\n                \"price\": 200000,\n                \"qty\": 10,\n                \"media\": \"https://ezyconnect.ir/video/stand.mp4\",\n                \"mediaMime\": \"mp4\",\n                \"mediaSize\": 123123,\n                \"created_at\": \"2025-01-19T21:22:46.000000Z\",\n                \"updated_at\": \"2025-01-19T21:22:46.000000Z\",\n                \"deleted_at\": null,\n                \"pivot\": {\n                    \"productable_type\": \"App\\\\Models\\\\Order\",\n                    \"orderId\": 18,\n                    \"productable_id\": 2,\n                    \"qty\": 6\n                }\n            }\n        ],\n        \"createdAt\": \"1403-11-01 00:56:44\",\n        \"totalPrice\": 23200000,\n        \"trackId\": \"3937112556\"\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "205e3b2b-0d50-4f46-900e-f831acf338a2"
+				},
+				{
+					"name": "Payment",
+					"item": [
+						{
+							"name": "payment",
+							"id": "e762173d-51b0-490b-8608-a1de2c79566a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"products\": {\n        \"1\": {\n            \"qty\": \"4\"\n        }\n        // \"7\": {\n        //     \"qty\": \"82\"\n        // },\n        // \"43\": {\n        //     \"qty\": \"34\"\n        // }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/payment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"payment"
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "20000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "1df0f350-ca61-4502-8a1a-4d61d1425387",
+									"name": "payment",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"products\": {\n        \"1\": {\n            \"qty\": \"4\"\n        },\n        \"2\": {\n            \"qty\": \"6\"\n        }\n        // \"7\": {\n        //     \"qty\": \"82\"\n        // },\n        // \"43\": {\n        //     \"qty\": \"34\"\n        // }\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/payment"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.3.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=UTF-8"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 21:26:45 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"action\":\"https:\\/\\/gateway.zibal.ir\\/start\\/3937112556\",\"inputs\":[],\"method\":\"POST\"}"
+								}
+							]
+						}
+					],
+					"id": "f1ba4b81-d434-4a0e-962a-170383b18b31"
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "get cart",
+							"id": "f831c451-8703-4462-9f53-ee6e390157a1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/cart/get"
+							},
+							"response": []
+						},
+						{
+							"name": "store cart",
+							"id": "6e8a67dc-aa6f-49fc-a673-d05f2a447bdd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"products\": [\n        {\n            \"id\": 1,\n            \"qty\": 2\n        },\n        {\n            \"id\": 1,\n            \"qty\": 5\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/cart/store"
+							},
+							"response": []
+						}
+					],
+					"id": "2ed9c400-5982-4f0e-b37b-c29c5df3314c"
+				}
+			],
+			"id": "36b6870b-562f-4495-9a63-016a47102ab8",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "85f43bc0-e7f8-4937-b8cd-0ad48bf314c9",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c073e99e-8242-4cdf-9280-9adf80440b76",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "5|aypOqsCKOBe4d04rqDkBSFSKVJuqX5G02XQZzVOR6697fea7"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bdb48280-929a-4e31-a51a-1478a102c310",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "48379b37-856c-4236-a3c3-ecee081a3afd",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
