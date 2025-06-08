@@ -1,0 +1,501 @@
+{
+	"info": {
+		"_postman_id": "6083b9c6-2019-42f8-9343-60115dac149b",
+		"name": "VPN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "auth",
+					"id": "b73cd550-b4d5-4609-ae09-115ba6805b71",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "wallet_address",
+									"value": "UQBEkOMLTHMkDWOPIoMvbXdUMiwgTh7Tk1D7F9ZtrrbS4q2i",
+									"type": "text"
+								},
+								{
+									"key": "public_key",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "signature",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{base_url}}/ton/auth"
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"id": "51571a49-1915-4e06-b5fb-4dbc4cbe117b",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "preconnect_id",
+									"value": "8eaaf652-305e-4f83-9351-0fa32ba7ad3c",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/ton/getUser"
+					},
+					"response": [
+						{
+							"id": "229db55e-0f12-47dc-88da-870e68ead978",
+							"name": "auth Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "preconnect_id",
+											"value": "8eaaf652-305e-4f83-9351-0fa32ba7ad3c",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/ton/getUser"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Mar 2025 15:44:24 GMT"
+								},
+								{
+									"key": "Accept",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"user\": {\n        \"id\": 5,\n        \"preconnected_id\": \"8eaaf652-305e-4f83-9351-0fa32ba7ad3c\",\n        \"ton_addr\": \"{\\\"address\\\":\\\"0:f25cdfb2f2b035f3d36fd61f5e149fc0296d9a7fea26bfac3d003697c544fb0d\\\",\\\"network\\\":-3,\\\"publicKey\\\":\\\"6fa767192929cbfcfe1f7cb47233942be82f4c048946a8629e77e23b74727ae9\\\",\\\"walletStateInit\\\":\\\"te6cckECFgEAArEAAgE0AgEAUYAAAAA\\\\/\\\\/\\\\/\\\\/+t9OzjJSU5f5\\\\/D75aORnKFfQXpgJEo1QxTzvxHbo5PXSgART\\\\/APSkE\\\\/S88sgLAwIBIAUEAQLyBwIBSAYNAtzQINdJwSCRW49jINcLHyCCEGV4dG69IYIQc2ludL2wkl8D4IIQZXh0brqOtIAg1yEB0HTXIfpAMPpE+Cj6RDBYvZFb4O1E0IEBQdch9AWDB\\\\/QOb6ExkTDhgEDXIXB\\\\/2zzgMSDXSYECgLmRMOBw4gkIAR4g1wsfghBzaWduuvLgin8IAeaO8O2i7fshgwjXIgKDCNcjIIAg1yHTH9Mf0x\\\\/tRNDSANMfINMf0\\\\/\\\\/XCgAK+QFAzPkQmiiUXwrbMeHywIffArNQB7Dy0IRRJbry4IVQNrry4Ib4I7vy0IgikvgA3gGkf8jKAMsfAc8Wye1UIJL4D95w2zzYCQP27aLt+wL0BCFukmwhjkwCIdc5MHCUIccAs44tAdcoIHYeQ2wg10nACPLgkyDXSsAC8uCTINcdBscSwgBSMLDy0InXTNc5MAGk6GwShAe78uCT10rAAPLgk+1V4tIAAcAAkVvg69csCBQgkXCWAdcsCBwS4lIQseMPINdKDAsKABCTW9sx4ddM0AByMNcsCCSOLSHy4JLSAO1E0NIAURO68tCPVFAwkTGcAYEBQNch1woA8uCO4sjKAFjPFsntVJPywI3iAJYB+kAB+kT4KPpEMFi68uCR7UTQgQFB1xj0BQSdf8jKAEAEgwf0U\\\\/Lgi44UA4MH9Fvy4Iwi1woAIW4Bs7Dy0JDiyFADzxYS9ADJ7VQCASAPDgAZvl8PaiaECAoOuQ+gLAIBIBMQAgFIEhEAEbJi+1E0NcKAIAAXsyX7UTQcdch1wsfgAgFuFRQAGa8d9qJoQBDrkOuFj8AAGa3OdqJoQCDrkOuF\\\\/8BuqjLH\\\"}\",\n        \"wallet\": \"Tonkeeper\",\n        \"features\": [\n            \"SendTransaction\",\n            {\n                \"name\": \"SendTransaction\",\n                \"maxMessages\": 255\n            }\n        ],\n        \"created_at\": \"2025-03-01T15:28:27.000000Z\",\n        \"updated_at\": \"2025-03-01T15:28:27.000000Z\"\n    },\n    \"token\": \"3|jOYOs3tcABjneWtyJLnXLwEtBOV1Fw95dgzms7yI9024a5f4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "connectWallet",
+					"id": "71f2da60-efbb-4c44-a16a-820f3d9faa81",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{base_url}}/ton/connectWallet"
+					},
+					"response": [
+						{
+							"id": "4a8cb5dc-105e-4e28-bb8b-a6fdce712aec",
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{base_url}}/ton/connectWallet"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Mar 2025 13:52:52 GMT"
+								},
+								{
+									"key": "Accept",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"headers\": {},\n    \"original\": {\n        \"preconnected_id\": \"088d3393-82b3-41b9-8f8f-3601404b5d75\",\n        \"wallet_links\": {\n            \"telegram-wallet\": \"https://t.me/wallet/start?startapp=tonconnect-v__2-id__780e0e61ce993301b7ec64bd0da002d8a6167018c704781f50c49c288db86c79-r__--7B--22manifestUrl--22--3A--22https--3A--2F--2Fbackvpn--2Eezyton--2Ecom--2Fmanifest--2Ejson--22--2C--22items--22--3A--5B--7B--22name--22--3A--22ton--5Fproof--22--2C--22payload--22--3A--22--7B--5C--22p--5Fid--5C--22--3A--5C--22088d3393--2D82b3--2D41b9--2D8f8f--2D3601404b5d75--5C--22--7D--22--7D--2C--7B--22name--22--3A--22ton--5Faddr--22--7D--5D--7D-ret__none\",\n            \"tonkeeper\": \"https://app.tonkeeper.com/ton-connect?v=2&id=2b399808656ea7181c8851e4f6d283e24e58ab35977e1996d69d7f85e424dd76&r=%7B%22manifestUrl%22%3A%22https%3A%2F%2Fbackvpn.ezyton.com%2Fmanifest.json%22%2C%22items%22%3A%5B%7B%22name%22%3A%22ton_proof%22%2C%22payload%22%3A%22%7B%5C%22p_id%5C%22%3A%5C%22088d3393-82b3-41b9-8f8f-3601404b5d75%5C%22%7D%22%7D%2C%7B%22name%22%3A%22ton_addr%22%7D%5D%7D&ret=none\",\n            \"tonhub\": \"https://tonhub.com/ton-connect?v=2&id=66c42b3f83259f70ff591b6dfd26c04020af046eb4707edd447904244eb49360&r=%7B%22manifestUrl%22%3A%22https%3A%2F%2Fbackvpn.ezyton.com%2Fmanifest.json%22%2C%22items%22%3A%5B%7B%22name%22%3A%22ton_proof%22%2C%22payload%22%3A%22%7B%5C%22p_id%5C%22%3A%5C%22088d3393-82b3-41b9-8f8f-3601404b5d75%5C%22%7D%22%7D%2C%7B%22name%22%3A%22ton_addr%22%7D%5D%7D&ret=none\",\n            \"mytonwallet\": \"https://connect.mytonwallet.org?v=2&id=4229e308b99967d796f343955aac93746e573f9a5da7cec339372ea7000a4121&r=%7B%22manifestUrl%22%3A%22https%3A%2F%2Fbackvpn.ezyton.com%2Fmanifest.json%22%2C%22items%22%3A%5B%7B%22name%22%3A%22ton_proof%22%2C%22payload%22%3A%22%7B%5C%22p_id%5C%22%3A%5C%22088d3393-82b3-41b9-8f8f-3601404b5d75%5C%22%7D%22%7D%2C%7B%22name%22%3A%22ton_addr%22%7D%5D%7D&ret=none\"\n        }\n    },\n    \"exception\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "awaitConnection",
+					"id": "f8695346-bf21-481a-beb6-f74534124382",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "preconnected_id",
+									"value": "8ab7507b-90c2-4b86-b0f4-3a7e597b342d",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/ton/awaitConnection"
+					},
+					"response": [
+						{
+							"id": "e665ab71-d7c5-4401-8386-a55d50597d59",
+							"name": "awaitConnection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "preconnected_id",
+											"value": "088d3393-82b3-41b9-8f8f-3601404b5d75",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/ton/awaitConnection"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.27"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Mar 2025 13:53:16 GMT"
+								},
+								{
+									"key": "Accept",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"headers\": {},\n    \"original\": {\n        \"message\": \"Wallet successfully connected\",\n        \"data\": {\n            \"ton_addr\": \"{\\\"address\\\":\\\"0:f5844ce5c1cf5f1c29242c254f9787d8c1327c02f204a8ee22aa70c4f1aeb00d\\\",\\\"network\\\":-3,\\\"publicKey\\\":\\\"6fa767192929cbfcfe1f7cb47233942be82f4c048946a8629e77e23b74727ae9\\\",\\\"walletStateInit\\\":\\\"te6cckECFgEAAwQAAgE0AQYBFP8A9KQT9LzyyAsCAgEgCAME+PKDCNcYINMf0x\\\\/THwL4I7vyZO1E0NMf0x\\\\/T\\\\/\\\\/QE0VFDuvKhUVG68qIF+QFUEGT5EPKj+AAkpMjLH1JAyx9SMMv\\\\/UhD0AMntVPgPAdMHIcAAn2xRkyDXSpbTB9QC+wDoMOAhwAHjACHAAuMAAcADkTDjDQOkyMsfEssfy\\\\/8FBwQQAGyBAQjXGPoA0z8wUiSBAQj0WfKnghBkc3RycHSAGMjLBcsCUAXPFlAD+gITy2rLHxLLP8lz+wAAbtIH+gDU1CL5AAXIygcVy\\\\/\\\\/J0Hd0gBjIywXLAiLPFlAF+gIUy2sSzMzJc\\\\/sAyEAUgQEI9FHypwIAUQAAAAApqaMXb6dnGSkpy\\\\/z+H3y0cjOUK+gvTASJRqhinnfiO3RyeulAAHCBAQjXGPoA0z\\\\/IVCBHgQEI9FHyp4IQbm90ZXB0gBjIywXLAlAGzxZQBPoCFMtqEssfyz\\\\/Jc\\\\/sAAgIBSBMJAgEgChICASAMCwARuMl+1E0NcLH4AgFYEQ0CASAPDgAZrx32omhAEGuQ64WPwAAZrc52omhAIGuQ64X\\\\/wAAK9ADJ7VQAPbKd+1E0IEBQNch9AQwAsjKB8v\\\\/ydABgQEI9ApvoTGAAWb0kK29qJoQICga5D6AhhHDUCAhHpJN9KZEM5pA+n\\\\/mDeBKAG3gQFImHFZ8xhALm0AHQ0wMhcbCSXwTgItdJwSCSXwTgAtMfIYIQcGx1Z70ighBkc3RyvbCSXwXgA\\\\/pAMCD6RAHIygfL\\\\/8nQ7UTQgQFA1yH0BDBcgQEI9ApvoTGzkl8H4AXTP8glghBwbHVnupI4MOMNA4IQZHN0crqSXwbjDRUUAIpQBIEBCPRZMO1E0IEBQNcgyAHPFvQAye1UAXKwjiOCEGRzdHKDHrFwgBhQBcsFUAPPFiP6AhPLassfyz\\\\/JgED7AJJfA+IAeAH6APQEMPgnbyIwUAqhIb7y4FCCEHBsdWeDHrFwgBhQBMsFJs8WWPoCGfQAy2kXyx9SYMs\\\\/IMmAQPsABueHvEo=\\\"}\",\n            \"preconnected_id\": \"088d3393-82b3-41b9-8f8f-3601404b5d75\",\n            \"wallet\": \"Tonkeeper\",\n            \"features\": [\n                \"SendTransaction\",\n                {\n                    \"maxMessages\": 4,\n                    \"name\": \"SendTransaction\"\n                }\n            ],\n            \"updated_at\": \"2025-03-01T13:53:16.000000Z\",\n            \"created_at\": \"2025-03-01T13:53:16.000000Z\",\n            \"id\": 4\n        }\n    },\n    \"exception\": null\n}"
+						}
+					]
+				}
+			],
+			"id": "af52b11e-8c3e-42fb-aabe-613989cc6604"
+		},
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "configs",
+					"id": "7f7f8bb6-6a59-472a-922d-a026260505ab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/configs"
+					},
+					"response": []
+				}
+			],
+			"id": "9fd626c3-7018-4673-8e66-12053c1a3997"
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "subscriptions",
+					"id": "65a4c98d-86bf-4ea0-aded-abdc8a5edc19",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/subscriptions"
+					},
+					"response": []
+				}
+			],
+			"id": "c2bf5f06-e681-493c-ab48-066a153b2292"
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "payment",
+					"id": "251627a6-29a1-46dc-bcc0-f98397047434",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "0.2",
+									"type": "text"
+								},
+								{
+									"key": "preconnected_id",
+									"value": "8ab7507b-90c2-4b86-b0f4-3a7e597b342d",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/ton/payment/send"
+					},
+					"response": []
+				},
+				{
+					"name": "verify transaction",
+					"id": "80baee97-cf9b-4ee6-9ffc-f73ecd53fedc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ton/payment/transaction?address=UQBv2kp7K42-j2pkwuaXmj_oNJiaJiAuE_RiMPZJqmw6J30P",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ton",
+								"payment",
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "UQBv2kp7K42-j2pkwuaXmj_oNJiaJiAuE_RiMPZJqmw6J30P"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBalance",
+					"id": "c964775c-6aa5-4bb6-9481-acdd2c65913d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ton/payment/balance/:wallet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ton",
+								"payment",
+								"balance",
+								":wallet"
+							],
+							"variable": [
+								{
+									"id": "1ac464b5-b444-476f-b2a6-01acd07e6e48",
+									"key": "wallet",
+									"value": "UQBEkOMLTHMkDWOPIoMvbXdUMiwgTh7Tk1D7F9ZtrrbS4q2i"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "dd5b9d0a-9e60-4f43-a0c0-aeb9984dc40d"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "10|DF9wU0ETcwgt29udsJ29uKwukshZR2If3CcirTiwe101a29e"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "62a3a5e1-045a-4da7-9a5c-7fd264590240"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "558b5a23-9518-4523-b8af-c7873ee54faf"
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api/v1",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "https://backvpn.salimimlk.ir/api/v1",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:43224/api/v1",
+			"type": "string"
+		}
+	]
+}
