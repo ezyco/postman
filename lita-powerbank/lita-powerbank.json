@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "3dd2fb3b-ff37-4f23-aad3-51991dc8cc10",
+		"name": "litapower bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"id": "12d227ca-5845-4974-940d-cdd495c650d9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"18520612744\",\"password\":\"111111\",\"lang\":\"en-us\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://litapower.w-dian.cn/agency/Auth/login?lang=en-us",
+					"protocol": "https",
+					"host": [
+						"litapower",
+						"w-dian",
+						"cn"
+					],
+					"path": [
+						"agency",
+						"Auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en-us"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openLock",
+			"id": "91342e62-7d55-4a77-89b9-7bae2bd9c377",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"device_id\":\"GT284240403142\",\"lock_id\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://litapower.w-dian.cn/agency/device/openLock?lang=en-us",
+					"protocol": "https",
+					"host": [
+						"litapower",
+						"w-dian",
+						"cn"
+					],
+					"path": [
+						"agency",
+						"device",
+						"openLock"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "en-us"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "eb914c00-7ad4-4042-90a4-a82896c36be9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/javascript, */*; q=0.01",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Languag",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": "https://levanzoo.ir/wp-admin/admin-ajax.php"
+			},
+			"response": []
+		}
+	]
+}
