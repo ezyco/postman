@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "217f8020-d00b-4e3b-b0ed-00836516645d",
+		"name": "waiter go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"id": "dd4f4544-eab9-44bc-b032-457902df24c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"omid2\",\n    \"email\": \"omid@2ggsds3f2.cc\"\n    // \"password\":\"omid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"id": "b5478c54-9b73-4687-abe2-ee683a62500d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/auth/login"
+					},
+					"response": []
+				}
+			],
+			"id": "d9953718-5052-417d-9cf1-092e486baac3"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "index",
+					"id": "68c8acc6-7f69-4077-a969-4f6de166b495",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/users"
+					},
+					"response": []
+				}
+			],
+			"id": "ec842f2e-1baf-4836-b10d-73cbaeb7766d"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "1bf222f6-890e-481c-8e61-674f547317c7"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				],
+				"id": "6878017c-ece6-43a7-8e41-8f8b54f37a09"
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
