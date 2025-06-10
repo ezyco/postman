@@ -3043,7 +3043,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"forAllProfiles\": false,\n    \"profileLink\": \"00000\",\n    \"active\": true,\n    // \"table_count\": 42,\n    \"location\": \"inja & onja, hame ja, hatta onjat, ok\"\n}",
+													"raw": "{\n    \"forAllProfiles\": true,\n    \"profileLink\": \"00000\",\n    // \"active\": true,\n    // \"table_count\": 42,\n    \"location\": \"inja & onja, hame ja, hatta onjat, ok\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -3065,7 +3065,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"waiter_id\": 2,\n    \"profile_links\": [\n        \"00000\",\n        // \"cv.menu\",\n        \"aa1\",\"omid\",\n        \"null\"\n    ]\n}",
+													"raw": "{\n    \"waiter_id\": 1,\n    \"profile_links\": [\n        \"00000\",\n        // \"cv.menu\",\n        \"aa1\",\"omid\",\n        \"null\"\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -3087,7 +3087,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"first_name\": \"omega12\",\n    // \"password\": \"omid1380\",\n    \"phone\": \"09389497957\" //unique attribute for create or update as find attribute\n}",
+													"raw": "{\n    \"first_name\": \"omega12\",\n    // \"password\": \"omid1380\",\n    \"phone\": \"09389497958\" //unique attribute for create or update as find attribute\n}",
 													"options": {
 														"raw": {
 															"language": "json"
