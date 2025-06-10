@@ -2977,163 +2977,174 @@
 									"name": "waiter",
 									"item": [
 										{
-											"name": "call waiter",
-											"id": "c9e45324-b759-4453-867a-84dfcf6d2d11",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "noauth"
-												},
-												"method": "GET",
-												"header": [
-													{
-														"key": "language",
-														"value": "en",
-														"type": "text",
-														"disabled": true
-													}
-												],
-												"url": {
-													"raw": "{{base_url}}/waiter/call?profileLink={{profileLink}}&tableNumber=2",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"waiter",
-														"call"
-													],
-													"query": [
-														{
-															"key": "profileLink",
-															"value": "{{profileLink}}"
+											"name": "app",
+											"item": [],
+											"id": "fe81c4e7-b26d-460b-a99f-f6941718b36a"
+										},
+										{
+											"name": "front",
+											"item": [
+												{
+													"name": "call waiter",
+													"id": "c9e45324-b759-4453-867a-84dfcf6d2d11",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "noauth"
 														},
-														{
-															"key": "tableNumber",
-															"value": "2"
+														"method": "GET",
+														"header": [
+															{
+																"key": "language",
+																"value": "en",
+																"type": "text",
+																"disabled": true
+															}
+														],
+														"url": {
+															"raw": "{{base_url}}/waiter/call?profileLink={{profileLink}}&tableNumber=2",
+															"host": [
+																"{{base_url}}"
+															],
+															"path": [
+																"waiter",
+																"call"
+															],
+															"query": [
+																{
+																	"key": "profileLink",
+																	"value": "{{profileLink}}"
+																},
+																{
+																	"key": "tableNumber",
+																	"value": "2"
+																}
+															]
 														}
-													]
+													},
+													"response": []
+												},
+												{
+													"name": "index",
+													"id": "2ebc608a-cdea-4b0f-94cf-8b23395f2a98",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": "{{base_url}}/waiter"
+													},
+													"response": []
+												},
+												{
+													"name": "setting",
+													"id": "c26ae581-afff-451c-afe3-4759bb8a22a9",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true,
+														"disabledSystemHeaders": {}
+													},
+													"request": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"forAllProfiles\": false,\n    \"profileLink\": \"00000\",\n    \"active\": 1,\n    // \"table_count\": 42,\n    \"location\": \"inja & onja, hame ja, hatta onjat, ok\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/waiter/setting"
+													},
+													"response": []
+												},
+												{
+													"name": "assign user to profile",
+													"id": "422dfeae-093e-4d0b-a1ec-7dc58dee36fa",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"waiter_id\": 1,\n    \"profile_links\": [\n        \"00000\",\n        // \"cv.menu\",\n        \"aa1\",\"omid\",\n        \"null\"\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/waiter/assignTo"
+													},
+													"response": []
+												},
+												{
+													"name": "createOrUpdate waiter Copy",
+													"id": "e626515c-fa9b-49b2-a5c3-e98b32c0b791",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"first_name\": \"omega12\",\n    // \"password\": \"omid1380\",\n    \"phone\": \"09389497958\" //unique attribute for create or update as find attribute\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/waiter"
+													},
+													"response": []
+												},
+												{
+													"name": "visibleToggle",
+													"id": "236ea49a-2673-4548-ae3b-64333002c4bc",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{base_url}}/waiter/:id",
+															"host": [
+																"{{base_url}}"
+															],
+															"path": [
+																"waiter",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"response": []
 												}
-											},
-											"response": []
-										},
-										{
-											"name": "index",
-											"id": "2ebc608a-cdea-4b0f-94cf-8b23395f2a98",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/waiter"
-											},
-											"response": []
-										},
-										{
-											"name": "setting",
-											"id": "c26ae581-afff-451c-afe3-4759bb8a22a9",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true,
-												"disabledSystemHeaders": {}
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"forAllProfiles\": false,\n    \"profileLink\": \"00000\",\n    \"active\": 1,\n    // \"table_count\": 42,\n    \"location\": \"inja & onja, hame ja, hatta onjat, ok\"\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/waiter/setting"
-											},
-											"response": []
-										},
-										{
-											"name": "assign user to profile",
-											"id": "422dfeae-093e-4d0b-a1ec-7dc58dee36fa",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"waiter_id\": 1,\n    \"profile_links\": [\n        \"00000\",\n        // \"cv.menu\",\n        \"aa1\",\"omid\",\n        \"null\"\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/waiter/assignTo"
-											},
-											"response": []
-										},
-										{
-											"name": "createOrUpdate waiter Copy",
-											"id": "e626515c-fa9b-49b2-a5c3-e98b32c0b791",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"first_name\": \"omega12\",\n    // \"password\": \"omid1380\",\n    \"phone\": \"09389497958\" //unique attribute for create or update as find attribute\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/waiter"
-											},
-											"response": []
-										},
-										{
-											"name": "visibleToggle",
-											"id": "236ea49a-2673-4548-ae3b-64333002c4bc",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{base_url}}/waiter/:id",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"waiter",
-														":id"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": "1"
-														}
-													]
-												}
-											},
-											"response": []
+											],
+											"id": "2b55359f-c21e-4bcc-b0c9-a9367354b147"
 										}
 									],
 									"id": "816c476e-0a68-4f28-b594-2e4a935d7540"
