@@ -3032,6 +3032,29 @@
 											"response": []
 										},
 										{
+											"name": "setting",
+											"id": "c26ae581-afff-451c-afe3-4759bb8a22a9",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true,
+												"disabledSystemHeaders": {}
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n        \n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/waiter/setting"
+											},
+											"response": []
+										},
+										{
 											"name": "assign user to profile",
 											"id": "422dfeae-093e-4d0b-a1ec-7dc58dee36fa",
 											"protocolProfileBehavior": {
