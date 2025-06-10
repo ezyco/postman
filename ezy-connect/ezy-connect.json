@@ -2978,7 +2978,108 @@
 									"item": [
 										{
 											"name": "app",
-											"item": [],
+											"item": [
+												{
+													"name": "login Copy",
+													"id": "358a04bc-eb90-41f3-8260-f36fbe6d4901",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n\n    // \"username\": \"09115863887\",\n    // \"password\": \"12345678\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/auth/login"
+													},
+													"response": [
+														{
+															"id": "580096e0-67ee-44d1-9cbb-97d2abdc74b2",
+															"name": "login",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json",
+																		"type": "text"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": "{{base_url}}/auth/login"
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Host",
+																	"value": "127.0.0.1:8000"
+																},
+																{
+																	"key": "Connection",
+																	"value": "close"
+																},
+																{
+																	"key": "X-Powered-By",
+																	"value": "PHP/8.3.12"
+																},
+																{
+																	"key": "Cache-Control",
+																	"value": "no-cache, private"
+																},
+																{
+																	"key": "Date",
+																	"value": "Tue, 21 Jan 2025 09:21:41 GMT"
+																},
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																},
+																{
+																	"key": "X-RateLimit-Limit",
+																	"value": "600"
+																},
+																{
+																	"key": "X-RateLimit-Remaining",
+																	"value": "600"
+																},
+																{
+																	"key": "Access-Control-Allow-Origin",
+																	"value": "*"
+																}
+															],
+															"cookie": [],
+															"responseTime": null,
+															"body": "{\n    \"message\": \"Authorize successful\",\n    \"token\": \"5|BQyl9k7drUNcL0NK5v86osm6tK7eB6P8P6BwD9AUcf155afc\",\n    \"user\": {\n        \"id\": 5,\n        \"name\": \"omid\",\n        \"avatar\": null,\n        \"email\": null,\n        \"phone\": \"09389497958\",\n        \"postCode\": null,\n        \"address\": null,\n        \"subscription\": \"no_expire\",\n        \"referral_code\": null,\n        \"created_at\": \"2023-12-28T18:03:43.000000Z\",\n        \"roles\": [\n            \"superAdmin\"\n        ],\n        \"permissions\": [\n            \"admin.manager.options\",\n            \"admin.manager.users\",\n            \"admin.manager.pbOptions\",\n            \"admin.manager.redirector\",\n            \"admin.customers.forms\",\n            \"admin.customers.formCafe\",\n            \"admin.manager.index\",\n            \"admin.manager.blog\",\n            \"admin.manager.marketer\",\n            \"admin.manager.statistics\"\n        ]\n    }\n}"
+														}
+													]
+												}
+											],
 											"id": "fe81c4e7-b26d-460b-a99f-f6941718b36a"
 										},
 										{
