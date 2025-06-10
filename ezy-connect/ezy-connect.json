@@ -3043,7 +3043,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n        \n}",
+													"raw": "{\n    \"forAllProfiles\": true,\n    \"profile_id\": 50,\n    // \"table_count\": 4123,\n    \"location\": \"inja & onja, hame ja\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
