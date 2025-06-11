@@ -2980,35 +2980,98 @@
 											"name": "app",
 											"item": [
 												{
-													"name": "login",
-													"id": "358a04bc-eb90-41f3-8260-f36fbe6d4901",
-													"protocolProfileBehavior": {
-														"disableBodyPruning": true
-													},
-													"request": {
-														"auth": {
-															"type": "noauth"
-														},
-														"method": "POST",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json",
-																"type": "text"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n\n    // \"username\": \"09115863887\",\n    // \"password\": \"12345678\"\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
+													"name": "auth",
+													"item": [
+														{
+															"name": "otp Copy",
+															"item": [
+																{
+																	"name": "check",
+																	"id": "24160315-b55b-4589-a1e8-a3925d406ffd",
+																	"protocolProfileBehavior": {
+																		"disableBodyPruning": true
+																	},
+																	"request": {
+																		"method": "POST",
+																		"header": [],
+																		"body": {
+																			"mode": "formdata",
+																			"formdata": [
+																				{
+																					"key": "mobile",
+																					"value": "09389497958",
+																					"type": "text"
+																				},
+																				{
+																					"key": "code",
+																					"value": "4824",
+																					"type": "text"
+																				}
+																			]
+																		},
+																		"url": "{{base_url}}/auth/checkOtp"
+																	},
+																	"response": []
+																},
+																{
+																	"name": "send",
+																	"id": "bdfcab86-777b-45b9-986b-7db80f3da698",
+																	"protocolProfileBehavior": {
+																		"disableBodyPruning": true
+																	},
+																	"request": {
+																		"method": "POST",
+																		"header": [],
+																		"body": {
+																			"mode": "formdata",
+																			"formdata": [
+																				{
+																					"key": "mobile",
+																					"value": "09389497958",
+																					"type": "text"
+																				}
+																			]
+																		},
+																		"url": "{{base_url}}/waiter/app/auth/sendOtp"
+																	},
+																	"response": []
 																}
-															}
+															],
+															"id": "0fef209a-d827-48c8-b4da-fece34f4b646"
 														},
-														"url": "{{base_url}}/waiter/app/auth/login"
-													},
-													"response": []
+														{
+															"name": "login",
+															"id": "358a04bc-eb90-41f3-8260-f36fbe6d4901",
+															"protocolProfileBehavior": {
+																"disableBodyPruning": true
+															},
+															"request": {
+																"auth": {
+																	"type": "noauth"
+																},
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json",
+																		"type": "text"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"username\": \"09389497958\",\n    \"password\": \"omid1380\"\n\n    // \"username\": \"09115863887\",\n    // \"password\": \"12345678\"\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": "{{base_url}}/waiter/app/auth/login"
+															},
+															"response": []
+														}
+													],
+													"id": "bb5f040d-9fca-4782-b57f-a56647ad76a4"
 												}
 											],
 											"id": "fe81c4e7-b26d-460b-a99f-f6941718b36a"
