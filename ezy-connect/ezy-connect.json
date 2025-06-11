@@ -2986,6 +2986,29 @@
 															"name": "otp Copy",
 															"item": [
 																{
+																	"name": "send",
+																	"id": "bdfcab86-777b-45b9-986b-7db80f3da698",
+																	"protocolProfileBehavior": {
+																		"disableBodyPruning": true
+																	},
+																	"request": {
+																		"method": "POST",
+																		"header": [],
+																		"body": {
+																			"mode": "formdata",
+																			"formdata": [
+																				{
+																					"key": "mobile",
+																					"value": "09389497958",
+																					"type": "text"
+																				}
+																			]
+																		},
+																		"url": "{{base_url}}/waiter/app/auth/sendOtp"
+																	},
+																	"response": []
+																},
+																{
 																	"name": "check",
 																	"id": "24160315-b55b-4589-a1e8-a3925d406ffd",
 																	"protocolProfileBehavior": {
@@ -3009,30 +3032,7 @@
 																				}
 																			]
 																		},
-																		"url": "{{base_url}}/auth/checkOtp"
-																	},
-																	"response": []
-																},
-																{
-																	"name": "send",
-																	"id": "bdfcab86-777b-45b9-986b-7db80f3da698",
-																	"protocolProfileBehavior": {
-																		"disableBodyPruning": true
-																	},
-																	"request": {
-																		"method": "POST",
-																		"header": [],
-																		"body": {
-																			"mode": "formdata",
-																			"formdata": [
-																				{
-																					"key": "mobile",
-																					"value": "09389497958",
-																					"type": "text"
-																				}
-																			]
-																		},
-																		"url": "{{base_url}}/waiter/app/auth/sendOtp"
+																		"url": "{{base_url}}/waiter/app/auth/checkOtp"
 																	},
 																	"response": []
 																}
