@@ -6113,18 +6113,6 @@
 										"url": "{{base_url}}/waiter/app/dashboard/getWaiterPermissions"
 									},
 									"response": []
-								},
-								{
-									"name": "getWaiterPermissions",
-									"id": "e9d8df36-90dd-4f34-a2b9-080875201a64",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
 								}
 							],
 							"id": "886e5a92-3d9b-4dd7-ad3e-3763c8fc0a76"
