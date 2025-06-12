@@ -6096,6 +6096,32 @@
 									},
 									"request": {
 										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/waiter/app/dashboard/index"
+									},
+									"response": []
+								},
+								{
+									"name": "get Waiter Permissions",
+									"id": "88bf021e-cc24-458e-afdb-cae0d076e1cd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/waiter/app/dashboard/getWaiterPermissions"
+									},
+									"response": []
+								},
+								{
+									"name": "getWaiterPermissions",
+									"id": "e9d8df36-90dd-4f34-a2b9-080875201a64",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
 										"header": []
 									},
 									"response": []
