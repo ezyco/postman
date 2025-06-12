@@ -6097,6 +6097,15 @@
 									"request": {
 										"method": "GET",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"profileLink\": \"00000\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{base_url}}/waiter/app/dashboard/index"
 									},
 									"response": []
