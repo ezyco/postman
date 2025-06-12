@@ -6084,6 +6084,24 @@
 								}
 							],
 							"id": "0bbdcf9e-576f-429c-9f0e-c26bcfa7ebd8"
+						},
+						{
+							"name": "dashboard",
+							"item": [
+								{
+									"name": "index",
+									"id": "63e54298-3064-4360-9379-85b636b27706",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
+							"id": "886e5a92-3d9b-4dd7-ad3e-3763c8fc0a76"
 						}
 					],
 					"id": "75c6a91d-ec3f-40de-b3e4-0f1b36c6760c"
